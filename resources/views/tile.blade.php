@@ -1,19 +1,19 @@
 <x-dashboard-tile :position="$position" :refresh-interval="$refreshIntervalInSeconds">
     <div class="font-bold text-center">{!! $articleTitle !!}</div>
-    <div class="text-sm font-bold text-center">{!! $articleContent !!}</div>
+    <div class="text-sm font-bold text-center" id="article-content">{!! $articleContent !!}</div>
 
     <img src="{!! $articleQrCode !!}" alt="QR Code" id="qrcode" />
     <style>
-        img{
+        #article-content img{
             padding:20px;
         }
-        p{
+        #article-content p{
             display: none;
         }
-        p:first-child{
+        #article-content p:first-child{
             display: block;
         }
-        hr{
+        #article-content hr{
             display: none;
         }
         #qrcode{
